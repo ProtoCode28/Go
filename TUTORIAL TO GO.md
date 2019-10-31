@@ -4,7 +4,7 @@
 
 “Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.” – https://golang.org [1].​
 
-![](file:///C:\Users\admin\Desktop\Anmerkung%202019-10-31%20153007.png)
+![](https://github.com/ProtoCode28/Go/blob/master/pictures/Anmerkung%202019-10-31%20153007.pnghttps://github.com/protocode28/go/blob/master/pictures/anmerkung%202019-10-31%20153007.png)
 
 ## WHERE DOES GO COME FROM?
 
