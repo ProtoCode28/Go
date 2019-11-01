@@ -159,6 +159,53 @@ Do you see the difference?
 ## Hands-On
 
 In my Hands-On I'm coding the magic conch shell. 
+What will we need for that?
+* read the question from the command line (standard input)
+* output of the answer(string) of the magic conch
+* random answer generator (=random number generator)
+* switch case function for the output options
+* while loop to keep the magic conch answering our questions
+
+So now that we know what we need, let's start coding!
+
+First of all let's import some packages which we will need later. Let's declare a variable of the datatype string, too and name it question. Later we will safe the question into it and use it as our while loop condition. 
+
+![](pictures/Bild17.png)
+
+In the main function let's let the user know, that he is able to exit the program by typing "exit" as his question. We simply output that to the command line at the beginning of the program. As we know already, the while loop in go is a for loop with an exit condition. Our exit condition of the loop will be the users question. If the users input is "exit" we will exit the loop. 
+
+![](pictures/Bild18.png)
+
+In the next step, we need to make sure to safe the users input into the question variable so our exit condition is working. We will read the users command line input with the *scanner* function, which is contained in the *bufio* packages that we included in the beginning. We need to let the scanner function know, what it should scan. In our case it's the standard input from command line. Therefore we use another function called *Stdin* which is contained in the *os* package. We also need to let the scanner know, that it scans a text. And of course the user has to know, that he has to type his question now. 
+
+![](pictures/Bild19.png)
+
+After the users question, we want the magic conch shell to answer it of course.
+So let's output *The magic conch says* to the command line. We don't want that in case the user types exit as his question to exit the program. So let's simple put an if condition in front of it. We also need to generate a random number, so the magic conch outputs every time a different answer. Therefor we use the *rand.Intn* function which is in the *math/rand* package included. Since we work in a deterministic environment the *rand.Intn* function will return every time the same random number. To prevent that we will use the *seed* function, which is also contained in the *math/rand* package. We need to seed the function with a different value every time the function is called. Using the time for that is perfect, since the time will be different every time the function is called. The time function we are using is also contained in a package. We included the *time* package in the beginning.
+
+![](pictures/Bild20.png)
+
+Now that we generated a random number. Let's use the switch case function, to output a different answer, based on the random number generated. Let's make 20 different answers. To make sure the random number generator, generates us only numbers from 0 to 19. To do that we need to write *20* into the *rand.Intn* function. I did that already above. Now let's generate answers.
+
+![](pictures/Bild21.png)
+![](pictures/Bild22.png)
+![](pictures/Bild23.png)
+
+Congratulations! We coded the magic conch shell together!
+
+In my git, where you found this document, you can also find the entire code in one piece. 
+
+Last but not least I wanna show you guys, how to write a recursive function with parameter passing. In my example I am writing a function which looks for the greatest common divisor. 
+
+![](pictures/ggT.png)
+
+If you return a variable you need to let the function know about that. You have to declare the datatype of the variable that's returned right before the function body. *func GGT(a int, b int) **int** {* In our case we return one integer value, so there is one ***int*** in front of the function body. If you want to pass multiple parameters, you would need to write multiple data types in front of the function body.  
+
+Thanks for reading guys. I hope you enjoyed it. 
+
+
+
+
 
 
 
